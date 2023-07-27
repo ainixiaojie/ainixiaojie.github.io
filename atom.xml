@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>❤</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-27T07:08:34.643Z</updated>
+  <updated>2023-07-27T13:46:13.048Z</updated>
   <id>http://example.com/</id>
-  
-  <author>
-    <name>John Doe</name>
-    
-  </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>hexo blog github</title>
     <link href="http://example.com/2023/07/27/1/"/>
     <id>http://example.com/2023/07/27/1/</id>
     <published>2023-07-27T03:01:23.925Z</published>
-    <updated>2023-07-27T07:08:34.643Z</updated>
+    <updated>2023-07-27T13:46:13.048Z</updated>
     
-    <content type="html"><![CDATA[<p>title: Hello World</p><h1 id="阿斯蒂芬撒地方撒旦发射点发射点f"><a href="#阿斯蒂芬撒地方撒旦发射点发射点f" class="headerlink" title="阿斯蒂芬撒地方撒旦发射点发射点f"></a>阿斯蒂芬撒地方撒旦发射点发射点f</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="hexo–github"><a href="#hexo–github" class="headerlink" title="hexo–github"></a>hexo–github</h1><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p><p><img src="/./img/avatar.png"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;title: Hello World&lt;/p&gt;
-&lt;h1 id=&quot;阿斯蒂芬撒地方撒旦发射点发射点f&quot;&gt;&lt;a href=&quot;#阿斯蒂芬撒地方撒旦发射点发射点f&quot; class=&quot;headerlink&quot; title=&quot;阿斯蒂芬撒地方撒旦发射点发射点f&quot;&gt;&lt;/a&gt;阿斯蒂芬撒地方撒旦发射点</summary>
+    <summary type="html">&lt;h1 id=&quot;hexo–github&quot;&gt;&lt;a href=&quot;#hexo–github&quot; class=&quot;headerlink&quot; title=&quot;hexo–github&quot;&gt;&lt;/a&gt;hexo–github&lt;/h1&gt;&lt;h1 id=&quot;hexo&quot;&gt;&lt;a href=&quot;#hexo&quot; class=&quot;</summary>
       
     
     
     
+    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
   </entry>
   
@@ -42,7 +40,7 @@
     <link href="http://example.com/2023/07/27/hello-world/"/>
     <id>http://example.com/2023/07/27/hello-world/</id>
     <published>2023-07-27T02:00:11.367Z</published>
-    <updated>2023-07-27T08:24:12.689Z</updated>
+    <updated>2023-07-27T12:38:32.695Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -54,6 +52,10 @@
     
     
     
+    <category term="Hello World" scheme="http://example.com/categories/Hello-World/"/>
+    
+    
+    <category term="Hello World" scheme="http://example.com/tags/Hello-World/"/>
     
   </entry>
   
