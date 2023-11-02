@@ -16,23 +16,23 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="hexo–githubhexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 既然是框架，就依照框架的流程去使用它。hexo是一个工具应用（Application） 使用流程： 12345678910# 第一步安装这个应用程序，hexo-cli是hexo脚手架，就是一个封装，打包好的，更方便用户使用">
+    <meta name="description" content="回溯算法（Backtracking algorithm）通过迭代的方式在解空间中寻找符合条件的解寻找符合条件的组合，排列 解空间，要清楚的构造自己的解空间树的形状，去搜索解 终止条件与剪枝函数剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo blog github">
-<meta property="og:url" content="http://example.com/2023/07/27/1/index.html">
+<meta property="og:title" content="Backtracking">
+<meta property="og:url" content="http://example.com/2023/07/28/Backtracking/index.html">
 <meta property="og:site_name" content="❤">
-<meta property="og:description" content="hexo–githubhexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 既然是框架，就依照框架的流程去使用它。hexo是一个工具应用（Application） 使用流程： 12345678910# 第一步安装这个应用程序，hexo-cli是hexo脚手架，就是一个封装，打包好的，更方便用户使用">
+<meta property="og:description" content="回溯算法（Backtracking algorithm）通过迭代的方式在解空间中寻找符合条件的解寻找符合条件的组合，排列 解空间，要清楚的构造自己的解空间树的形状，去搜索解 终止条件与剪枝函数剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/example.jpg">
-<meta property="article:published_time" content="2023-07-27T03:01:23.925Z">
-<meta property="article:modified_time" content="2023-07-28T01:53:11.198Z">
-<meta property="article:tag" content="hexo">
+<meta property="article:published_time" content="2023-07-28T12:08:35.000Z">
+<meta property="article:modified_time" content="2023-07-28T13:03:23.988Z">
+<meta property="article:tag" content="Backtracking algorithm">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/example.jpg">
   
   
   
-  <title>hexo blog github - ❤</title>
+  <title>Backtracking - ❤</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hexo blog github"></span>
+            <span id="subtitle" data-typed-text="Backtracking"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-27 11:01" pubdate>
-          2023年7月27日 上午
+        <time datetime="2023-07-28 20:08" pubdate>
+          2023年7月28日 晚上
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          516 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          12 分钟
+          5 分钟
         
       </span>
     
@@ -270,26 +270,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">hexo blog github</h1>
+            <h1 id="seo-header">Backtracking</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="hexo–github"><a href="#hexo–github" class="headerlink" title="hexo–github"></a>hexo–github</h1><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>既然是框架，就依照框架的流程去使用它。<br>hexo是一个工具应用（Application）</p>
-<p>使用流程：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment"># 第一步安装这个应用程序，hexo-cli是hexo脚手架，就是一个封装，打包好的，更方便用户使用的应用程序形式</span><br>npm <span class="hljs-keyword">install </span>hexo-cli -g <br><span class="hljs-comment"># 开始初始化一个博客。其实这一步，就是使用hexo-cli创建一个容器（blog目录，及其里面相关文件），然后下载一个默认主题的博客，放在容器里面。</span><br>hexo init <span class="hljs-keyword">blog</span><br><span class="hljs-keyword"></span><span class="hljs-comment"># 进入刚才使用初始化命令创建的blog目录</span><br>cd <span class="hljs-keyword">blog</span><br><span class="hljs-keyword"></span><span class="hljs-comment"># 下载相关依赖的库文件，包文件，第三方模块</span><br>npm <span class="hljs-keyword">install</span><br><span class="hljs-keyword"></span><span class="hljs-comment"># 启动hexo web程序，博客网站可以正常运行起来，此时可以浏览器输入localhost：4000，可以看到默认的hexo博客网站</span><br>hexo server<br></code></pre></td></tr></table></figure>
+                <h1 id="回溯算法（Backtracking-algorithm）"><a href="#回溯算法（Backtracking-algorithm）" class="headerlink" title="回溯算法（Backtracking algorithm）"></a>回溯算法（Backtracking algorithm）</h1><p>通过迭代的方式在解空间中寻找符合条件的解<br>寻找符合条件的组合，排列</p>
+<p>解空间，要清楚的构造自己的解空间<br>树的形状，去搜索解</p>
+<p>终止条件与剪枝函数<br>剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回<br>终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符合结果就行。</p>
+<p>剪枝函数放置在哪里呢？<br>放在for循环里面更好还是在终止条件里面更好？</p>
+<p>放在循环里面可以更快的终止不符合条件的解<br>但是放在终止条件，有清晰明了的结构</p>
+<p>所以自己判断。在处理节点这里处理</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; res;<br>vector&lt;<span class="hljs-type">int</span>&gt; tem;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(参数)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (终止条件) &#123;<br>        存放结果;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">for</span> (选择：本层集合中元素（树中节点孩子的数量就是集合的大小）) &#123;<br>        处理节点;<br>        <span class="hljs-built_in">backtracking</span>(路径，选择列表); <span class="hljs-comment">// 递归</span><br>        回溯，撤销处理结果<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><p>单纯方便，还不够吸引人，吸引人还有其相应的主题</p>
-<p>博客不同的样式就是其不同的主题</p>
-<p>应用程序生成的blog目录下，有个themes文件夹，可以下载其他的主题放置在这个文件夹里面。<br><img src="/./../img/image.png" srcset="/img/loading.gif" lazyload><br>我这里有三个主题，我所下载的，fuild，resume-docs，Sw-blog这三个。默认主题landscape不在里面。<br><img src="/./../img/image-1.png" srcset="/img/loading.gif" lazyload><br>而每个主题里面的文件目录结构应该一致，大差不差<br><img src="/./../img/image-2.png" srcset="/img/loading.gif" lazyload></p>
-<p>其次是配置主题，哪怕是同一个主题，设置不同，也会有不同的差异<br>每个主题里面都有一个_config.yml。可以在里面查看可以自己设置的设置</p>
-<p>blog目录下，也有一个_config.yml。这个整个本地hexo的设置。两者相互配合。<br>若有存在对一个属性不同的设置，主题里面的生效，优先级更高。</p>
-<h1 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h1><h2 id="创建一个仓库repositories"><a href="#创建一个仓库repositories" class="headerlink" title="创建一个仓库repositories"></a>创建一个仓库repositories</h2><p>仓库的名字：[GitHub_name].github.io<br>Add a README file这个选项，可选可不选。<br>勾上：就是创建readme文件，默认创建仓库main分支了。<br>不勾上：就是一个空的仓库，没有分支，里面啥都没有。<br><img src="/./../img/image-3.png" srcset="/img/loading.gif" lazyload><br>在创建的这个仓库里面的settings里面设置<br>左侧General设置：Default branch。默认是main，但是我本地使用git上传文件，创建使用的master分支，所以我修改了<br><img src="/./../img/image-4.png" srcset="/img/loading.gif" lazyload><br>左侧Pagers设置：Branch选择blog网站文件那个分支，第二个&#x2F;root，是要求在该目录下能找到index.html文件。<br>这个设置，就是告诉github，在我这个仓库的该分支的该目录下，找到index.html文件，并在人家访问[GitHub_name].github.io网址的时候，响应这个网页。<br><img src="/./../img/image-5.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="上传blog网站文件"><a href="#上传blog网站文件" class="headerlink" title="上传blog网站文件"></a>上传blog网站文件</h2><p>blog网站文件怎么获取，使用hexo这个应用程序</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs verilog"># 清楚缓存，清楚之前产生的文件。<br>hexo clean<br># 这个命令会产生 <span class="hljs-variable">.deploy_git</span>文件夹。这个文件和github主仓库的文件一样，这个就是使用hexo，它按照要求（主题，配置文件，自己写的markdown文件），自动生成的blog网站文件<br>hexo <span class="hljs-keyword">generate</span> <br># 自动deploy（部署），在_config<span class="hljs-variable">.yml</span>配置<br>hexo deploy<br></code></pre></td></tr></table></figure>
-<p><img src="/./../img/image.png" srcset="/img/loading.gif" lazyload><br><img src="/./../img/image-6.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h1><p>配置就这些，对应上了就行<br>官方文件要一直看，跟着官方文件走 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" title="Title">hexo官网</a></p>
 
                 
               </div>
@@ -308,7 +301,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/hexo/" class="category-chain-item">hexo</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
   
 
@@ -323,7 +316,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/hexo/" class="print-no-link">#hexo</a>
+        <a href="/tags/Backtracking-algorithm/" class="print-no-link">#Backtracking algorithm</a>
       
     </div>
   
@@ -337,18 +330,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/28/Backtracking/" title="Backtracking">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Backtracking</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/27/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/07/27/1/" title="hexo blog github">
+                        <span class="hidden-mobile">hexo blog github</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
