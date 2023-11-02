@@ -16,23 +16,23 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="回溯算法（Backtracking algorithm）通过迭代的方式在解空间中寻找符合条件的解寻找符合条件的组合，排列 解空间，要清楚的构造自己的解空间树的形状，去搜索解 终止条件与剪枝函数剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符">
+    <meta name="description" content="机器学习流程第一步，准备好数据集准备数据集。拿到了大量的数据。当然如果是强化学习，我还没坐过，还不知道，需不需要数据集。 第二部，数据处理其实第一步，也应该在这一步里面吧 要对数据进行处理。。 数据特征的选取数据集的数据，不一定都是我们需要的。所以要进行一定的筛选数据集的一列，这个列名就是特征的名字。有的特征没有意义，可以不要。 数据集打乱就是打乱数据的顺序，有的数据集会按照某一列（标签列，称之为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Backtracking">
-<meta property="og:url" content="http://example.com/2023/07/28/Backtracking/index.html">
+<meta property="og:title" content="pytorch">
+<meta property="og:url" content="http://example.com/2023/08/22/pytorch/index.html">
 <meta property="og:site_name" content="❤">
-<meta property="og:description" content="回溯算法（Backtracking algorithm）通过迭代的方式在解空间中寻找符合条件的解寻找符合条件的组合，排列 解空间，要清楚的构造自己的解空间树的形状，去搜索解 终止条件与剪枝函数剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符">
+<meta property="og:description" content="机器学习流程第一步，准备好数据集准备数据集。拿到了大量的数据。当然如果是强化学习，我还没坐过，还不知道，需不需要数据集。 第二部，数据处理其实第一步，也应该在这一步里面吧 要对数据进行处理。。 数据特征的选取数据集的数据，不一定都是我们需要的。所以要进行一定的筛选数据集的一列，这个列名就是特征的名字。有的特征没有意义，可以不要。 数据集打乱就是打乱数据的顺序，有的数据集会按照某一列（标签列，称之为">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/example.jpg">
-<meta property="article:published_time" content="2023-07-28T12:08:35.000Z">
-<meta property="article:modified_time" content="2023-07-28T13:03:23.988Z">
-<meta property="article:tag" content="Backtracking algorithm">
+<meta property="article:published_time" content="2023-08-22T01:08:01.000Z">
+<meta property="article:modified_time" content="2023-08-22T03:20:33.468Z">
+<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/example.jpg">
   
   
   
-  <title>Backtracking - ❤</title>
+  <title>pytorch - ❤</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Backtracking"></span>
+            <span id="subtitle" data-typed-text="pytorch"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-28 20:08" pubdate>
-          2023年7月28日 晚上
+        <time datetime="2023-08-22 09:08" pubdate>
+          2023年8月22日 上午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          516 字
+          1.2k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          5 分钟
+          11 分钟
         
       </span>
     
@@ -270,20 +270,23 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Backtracking</h1>
+            <h1 id="seo-header">pytorch</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="回溯算法（Backtracking-algorithm）"><a href="#回溯算法（Backtracking-algorithm）" class="headerlink" title="回溯算法（Backtracking algorithm）"></a>回溯算法（Backtracking algorithm）</h1><p>通过迭代的方式在解空间中寻找符合条件的解<br>寻找符合条件的组合，排列</p>
-<p>解空间，要清楚的构造自己的解空间<br>树的形状，去搜索解</p>
-<p>终止条件与剪枝函数<br>剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回<br>终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符合结果就行。</p>
-<p>剪枝函数放置在哪里呢？<br>放在for循环里面更好还是在终止条件里面更好？</p>
-<p>放在循环里面可以更快的终止不符合条件的解<br>但是放在终止条件，有清晰明了的结构</p>
-<p>所以自己判断。在处理节点这里处理</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; res;<br>vector&lt;<span class="hljs-type">int</span>&gt; tem;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(参数)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (终止条件) &#123;<br>        存放结果;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">for</span> (选择：本层集合中元素（树中节点孩子的数量就是集合的大小）) &#123;<br>        处理节点;<br>        <span class="hljs-built_in">backtracking</span>(路径，选择列表); <span class="hljs-comment">// 递归</span><br>        回溯，撤销处理结果<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
+                <h1 id="机器学习流程"><a href="#机器学习流程" class="headerlink" title="机器学习流程"></a>机器学习流程</h1><h2 id="第一步，准备好数据集"><a href="#第一步，准备好数据集" class="headerlink" title="第一步，准备好数据集"></a>第一步，准备好数据集</h2><p>准备数据集。拿到了大量的数据。<br>当然如果是强化学习，我还没坐过，还不知道，需不需要数据集。</p>
+<h2 id="第二部，数据处理"><a href="#第二部，数据处理" class="headerlink" title="第二部，数据处理"></a>第二部，数据处理</h2><p>其实第一步，也应该在这一步里面吧</p>
+<p>要对数据进行处理。<br>。</p>
+<h3 id="数据特征的选取"><a href="#数据特征的选取" class="headerlink" title="数据特征的选取"></a>数据特征的选取</h3><p>数据集的数据，不一定都是我们需要的。所以要进行一定的筛选<br>数据集的一列，这个列名就是特征的名字。有的特征没有意义，可以不要。</p>
+<h3 id="数据集打乱"><a href="#数据集打乱" class="headerlink" title="数据集打乱"></a>数据集打乱</h3><p>就是打乱数据的顺序，有的数据集会按照某一列（标签列，称之为标签，就是结果，答案，我们要用模型去预测结果，使得预测的结果尽可能符合实际的结果）<br>如果存在一定顺序的话，可能会影响训练的效果，譬如模型会倾向数据按顺序的最后的一个结果。<br>当然了，如果这个数据集的按照时间排列，模型就是需要抓取这种时序性，譬如RNN，循环神经网络（会根据以前的信息来预测下一的输出结果）。这种应该就不用</p>
+<h3 id="一条输入数据的size的调整"><a href="#一条输入数据的size的调整" class="headerlink" title="一条输入数据的size的调整"></a>一条输入数据的size的调整</h3><p>一张图片数据 3<em>width</em>height<br>（<br>举例：3<em>1920</em>1080：宽是1920，高是1080，对应的每个位置是一个像素点。而每个像素点，由RGB 3个数值组成<br>所以有三个二维矩阵，第一个矩阵对应所有像素点R的数值，第二矩阵对应所有像素点G的数值，第三个B的。一个数值就是一个浮点数（0-255）<br>每一个矩阵在机器学习中，称为一个通道</p>
+<p>所以一张图片，在机器学习中：就是一个三通道，宽是1920，高是1080的数据而已<br>size:[3,1920,1080]<br>）<br>但是呀，大量的数据，不可能一个数据一个数据的去训练，所以有batch_size这个超参数，就是一次多少条数据<br>（<br>再解释一个名词,超参数，为什么是超参数，因为不是实际的参数，但又比参数要重要，所以称之为超参数，<br>解释一下参数，参数就是模型的参数，在神经网路中，模型，就是由好多个好多个二维矩阵组成。二维矩阵中的每一个数值，就是 一个参数<br>所以超参数，会直接影响模型。超级，名副其实。<br>）<br>pytorch，也默认不是一条数据 一条数据的训练<br>一次进入模型很多条数据<br>size进化 ：[batch_size,channel,width,height]，[10,3,1920,1080]</p>
+<h3 id="数据集Datasets"><a href="#数据集Datasets" class="headerlink" title="数据集Datasets"></a>数据集Datasets</h3><p>Datasets的作用是将原始的数据转换为模型能够处理的格式。<br>它提供了一些基本的方法，比如__len__用于获取数据集的大小，<br>__getitem__用于按索引获取单个数据样本。</p>
+<p>可能某一列的数据，不符合，譬如一个字符串转换成列表（可能），有的浮点数可能需要转换成整数（少，举例子而已）</p>
+<p>大部分浮点数，因为pytorch，和计算机发达。默认64位浮点数，甚至有的双精度。128位的浮点数。<br>但是大量的数据集，精度高，会加大计算量，very 大。所以，需要手动的去给数据设置数据格式，numpy.float32，torch.float32（32位的浮点数，非常好，即保留了一定精度，32位大大降低计算量）</p>
+<p>我们可以在这个类中进行数据预处理、数据增强等操作，<br>以满足模型的需求。</p>
+<h3 id="数据迭代器Dataloader"><a href="#数据迭代器Dataloader" class="headerlink" title="数据迭代器Dataloader"></a>数据迭代器Dataloader</h3>
                 
               </div>
             
@@ -301,7 +304,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  <a href="/categories/pytorch/" class="category-chain-item">pytorch</a>
   
   
 
@@ -316,7 +319,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Backtracking-algorithm/" class="print-no-link">#Backtracking algorithm</a>
+        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="print-no-link">#机器学习</a>
       
     </div>
   
@@ -330,9 +333,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/31/Backtracking2/" title="Backtracking2">
+                      <a href="/2023/11/02/reinforcement-learning/" title="reinforcement_learning 概论">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Backtracking2</span>
+                        <span class="hidden-mobile">reinforcement_learning 概论</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -340,8 +343,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/27/1/" title="hexo blog github">
-                        <span class="hidden-mobile">hexo blog github</span>
+                      <a href="/2023/08/11/VGG%E2%80%94demo/" title="VGG—demo">
+                        <span class="hidden-mobile">VGG—demo</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
