@@ -6,18 +6,90 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-02T02:27:13.248Z</updated>
+  <updated>2024-11-05T14:03:38.104Z</updated>
   <id>http://example.com/</id>
   
+  <author>
+    <name>梁帅杰</name>
+    
+  </author>
+  
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mathematical_Foundations_of_Reinforcement_Learning</title>
+    <link href="http://example.com/2023/11/04/Mathematical-Foundations-of-Reinforcement-Learning/"/>
+    <id>http://example.com/2023/11/04/Mathematical-Foundations-of-Reinforcement-Learning/</id>
+    <published>2023-11-04T02:25:11.000Z</published>
+    <updated>2024-11-05T14:03:38.104Z</updated>
+    
+    
+    
+    
+    
+    <category term="Mathematical_Foundations_of_Reinforcement_Learning" scheme="http://example.com/tags/Mathematical-Foundations-of-Reinforcement-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>reinforcement_learning_Bellman_equation</title>
+    <link href="http://example.com/2023/11/03/reinforcement-learning-Bellman-equation/"/>
+    <id>http://example.com/2023/11/03/reinforcement-learning-Bellman-equation/</id>
+    <published>2023-11-03T02:48:10.000Z</published>
+    <updated>2024-11-05T14:05:42.913Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="贝尔曼公式-Bellman-equation"><a href="#贝尔曼公式-Bellman-equation" class="headerlink" title="贝尔曼公式 Bellman_equation"></a>贝尔曼公式 Bellman_equation</h1><p>用来计算。当前的全局策略下，状态为s。可以获得的return（一系列动作至达到目标，或者无限延续的连续动作序列，所获的奖励值）</p><p>这个return。是一个期望值，是所有的可能的动作序列的期望奖励。</p><p>这个return值可以认为是当前策略下，状态s的值为return的值  状态值  state value</p><p>举例：<br>    五个状态，初始时，五个状态值<br>    [0,0,0,0,0]<br>    动作只有一个。所以每个状态都只能执行该动作。<br>    奖励值如下：<br>    第五个状态就是目的地。所以第四个状态执行动作，获得奖励值为1。其余所有状态，执行动作获得的奖励值都为0<br>    [0,0,0,1,0]</p><pre><code class="hljs">经过第一次动作迭代,1-2-3-4-5.结束guma=0.1s_value=reward+guma*s_next_value执行第一个动作s_1_value=0_reward+guma*s_2_values_1_value=0+0.1*0=0执行第二个动作s_2_value=1_reward+guma*s_3_values_2_value=0+0.1*0=0执行第三个动作s_3_value=0_reward+guma*s_4_values_3_value=0+0.1*0=0执行第四个动作s_4_value=0_reward+guma*s_5_values_4_value=1+0.1*0=1-----第一次到达目的地，完成了一回合的学习状态值：[0,0,0,**0**,0]----&gt;[0,0,0,**1**,0]---- 第二回合来了经过动作迭代,1-2-3-4-5.结束guma=0.1s_value=reward+guma*s_next_value执行第一个动作s_1_value=0_reward+guma*s_2_values_1_value=0+0.1*0=0执行第二个动作s_2_value=1_reward+guma*s_3_values_2_value=0+0.1*0=0执行第三个动作s_3_value=0_reward+guma*s_4_values_3_value=0+0.1*1=0.1执行第四个动作s_4_value=0_reward+guma*s_5_values_4_value=1+0.1*0=1-----第二次到达目的地，完成了二回合的学习状态值：[0,0,**0**,1,0]----&gt;[0,0,**0.1**,1,0]由此可推:第三次[0,**0**，0.1,1,0]----&gt;[0,**0.01**,0.1,1,0]第四次[**0**，0。01,0.1,1,0]----&gt;[**0.001**,001,0.1,1,0]</code></pre><p>Action value 动作值<br>状态值:<br>这里设定，每个状态只有一个动作。所以动作的概率值为1.没得挑<br>s_value&#x3D;reward+guma<em>s_next_value<br>实际上：<br>s_value&#x3D;{a_probablityity  * [a_reward+guma</em>s_next_value]}的期望</p><p>状态值&#x3D;{动作的概率<em>（动作reward+动作后所到达的状态的状态值）}的期望。<br>动作值&#x3D;（动作reward+动作后所到达的状态的状态值）<br>a_value&#x3D;a_reward+guma</em>s_next_value</p><h1 id="贝尔曼最优公式-Bellman-optimality-equation"><a href="#贝尔曼最优公式-Bellman-optimality-equation" class="headerlink" title="贝尔曼最优公式 Bellman_optimality_equation"></a>贝尔曼最优公式 Bellman_optimality_equation</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;贝尔曼公式-Bellman-equation&quot;&gt;&lt;a href=&quot;#贝尔曼公式-Bellman-equation&quot; class=&quot;headerlink&quot; title=&quot;贝尔曼公式 Bellman_equation&quot;&gt;&lt;/a&gt;贝尔曼公式 Bellman_equati</summary>
+      
+    
+    
+    
+    
+    <category term="reinforcement_learning" scheme="http://example.com/tags/reinforcement-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>reinforcement_learning_Actor</title>
+    <link href="http://example.com/2023/11/02/reinforcement-learning-Actor/"/>
+    <id>http://example.com/2023/11/02/reinforcement-learning-Actor/</id>
+    <published>2023-11-02T07:52:13.000Z</published>
+    <updated>2024-11-05T14:03:57.513Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Actor-行动者-演员"><a href="#Actor-行动者-演员" class="headerlink" title="Actor 行动者&#x2F;演员"></a>Actor 行动者&#x2F;演员</h1><p>这是一种agent（智能体）</p><p>输入：状态</p><p>使用<strong>神经网络</strong></p><p>输入：每个动作的概率值</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Actor-行动者-演员&quot;&gt;&lt;a href=&quot;#Actor-行动者-演员&quot; class=&quot;headerlink&quot; title=&quot;Actor 行动者&amp;#x2F;演员&quot;&gt;&lt;/a&gt;Actor 行动者&amp;#x2F;演员&lt;/h1&gt;&lt;p&gt;这是一种agent（智能体）&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="reinforcement_learning" scheme="http://example.com/categories/reinforcement-learning/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>reinforcement_learning 概论</title>
     <link href="http://example.com/2023/11/02/reinforcement-learning/"/>
     <id>http://example.com/2023/11/02/reinforcement-learning/</id>
     <published>2023-11-02T02:26:08.000Z</published>
-    <updated>2023-11-02T02:27:13.248Z</updated>
+    <updated>2024-11-05T14:04:07.152Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="Reinforcement-Learning-强化学习"><a href="#Reinforcement-Learning-强化学习" class="headerlink" title="Reinforcement Learning    强化学习"></a>Reinforcement Learning    强化学习</h1><p>智能体与环境的交互。</p><p>智能体  根据环境的状态  提供动作给环境<br>环境    执行了动作  改变了环境的状态    反馈奖励给智能体（状态信息也反馈给智能体）</p><p>智能体在根据自己提供的动作与环境反馈的奖励，不断学习。<br>环境根据智能体提供的动作不断变化状态，反馈奖励。</p><h2 id="智能体"><a href="#智能体" class="headerlink" title="智能体"></a>智能体</h2><p>智能体就三个行为,选择动作,预测动作,学习</p><h3 id="1，选择动作-Sample"><a href="#1，选择动作-Sample" class="headerlink" title="1，选择动作 Sample"></a>1，选择动作 Sample</h3><p>输入：环境的状态<br>输出：智能体选择的动作</p><p>常见的。e-greedy策略<br>假设e&#x3D;0.3<br>生成一个随机数,范围[0，1]。<br>若是随机数小于e。则从所有的动作中随机选择一个动作<br>否则，使用预测Predict。他会选择当前最优的动作。</p><pre><code class="hljs">这个通常是在学习的时候使用这个选择动作 Sample。若是学习完成了，则就直接使用Predict了。</code></pre><p>一定概率的随机选择，可以走出更多不同的动作。放置陷入局部最优。</p><pre><code class="hljs">三个动作，[1，2，3]对应奖励 [1，2，3]但是默认，一开始的时候。我们认为所有动作的奖励值都为0。[0，0，0]奖励值一样，第一次执行动作1，得到奖励1。更新奖励值[1，0，0]若是没有随机。那么以后都会选择动作1。无法学习到真正最好的动作。</code></pre><h3 id="2，预测动作-Predict"><a href="#2，预测动作-Predict" class="headerlink" title="2，预测动作 Predict"></a>2，预测动作 Predict</h3><p>输入：环境的状态</p><p>输出：智能体当前策略的最优的动作&#x2F;或者价值最高的动作</p><h3 id="3，学习-Learn"><a href="#3，学习-Learn" class="headerlink" title="3，学习 Learn"></a>3，学习 Learn</h3><p>输入：环境的状态，奖励，（可选择的：智能体选择执行的动作）</p><p>输出：更新智能体的策略（函数，模型，这些都是一样的东西，就是智能体选择动作的方法）。</p><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>设定与行为</p><pre><code class="hljs">设定：    状态的设定    动作的设定    奖励的设定行为：    重置环境    执行动作（默认执行）    计算奖励（后台执行，执行动作后自动进行）</code></pre><h3 id="状态的设定-States-Observation"><a href="#状态的设定-States-Observation" class="headerlink" title="状态的设定 States&#x2F;Observation"></a>状态的设定 States&#x2F;Observation</h3><p>环境的状态就是一条信息，一条数据。可以唯一表示一个状态。</p><p>最常见的就是用一条向量代表一个状态。</p><p>用一个图片代表一个状态。</p><p>所有可能的状态组合在一起，称之为观测空间<strong>Observation_Space</strong>。<br>这只是一个概念。重点还是放在状态的表示。</p><p>状态的表示有离散型和连续性。<br>假设数值范围[1，10]。</p><pre><code class="hljs">离散型状态：    离散值设置1。10个状态。每个数字代表一个状态。1，2，3，4，5，6，7，8，9，10    离散值设置2。5个状态。1，3，5，7，9。    ...连续型状态：    无数个状态：0.1，4.675，7.334等等</code></pre><p>假设状态：</p><pre><code class="hljs">[时间，水库水位下降百分比]：一个状态由这两个特征表示时间：只可取小时为单位，则离散值1-24水库水位下降百分比：若不限制小数个数。随意取值，连续。无数个该观测空间也是连续的。</code></pre><p><mark> 这里还有个设定，环境信息的设定</mark></p><pre><code class="hljs">环境的附加信息。常常是一些不会变化的信息。譬如一个打boss游戏。    环境状态就是boss的状态    动作就是角色的技能    附加的信息：        boss的名字。        角色的信息。        ...</code></pre><h3 id="动作的设定-Actions"><a href="#动作的设定-Actions" class="headerlink" title="动作的设定 Actions"></a>动作的设定 Actions</h3><p>动作的设定与状态的设定一样。离散型与连续型。</p><pre><code class="hljs">假设动作[上，下，左，右]------离散型也可假设[方向，距离（该值连续）]-----连续性</code></pre><p>所有的动作集合一起称之为动作空间 <strong>Action_Space</strong></p><h3 id="奖励的设定-Reward"><a href="#奖励的设定-Reward" class="headerlink" title="奖励的设定 Reward"></a>奖励的设定 Reward</h3><p>仁者见仁，智者见智<br>打怪游戏：boss下降的血量值<br>迷宫游戏：只有到达终点才给奖励值。只要没到终点，奖励值-1。<br>。。。</p><h3 id="执行动作-Step"><a href="#执行动作-Step" class="headerlink" title="执行动作 Step"></a>执行动作 Step</h3><p>仁者见仁，智者见智</p><p>这个行为总的来说：执行动作，计算奖励，给与反馈。这三个小步骤</p><pre><code class="hljs">1，执行动作，重点就是这个动作的逻辑如何执行动作，打怪游戏，动作是释放一技能。技能伤害是100，护甲50，是否暴击（暴击两倍伤害）：是。boss血量=boss血量-（100-50）*2。2，计算奖励：（100-50）*2。当然这是假设的奖励机制。也可以造成伤害就奖励100.类似这种。仁者见仁，智者见智3，给与反馈，要有返回值：状态，奖励，是否终止，等等</code></pre><p>动作的执行逻辑部分，也是有自己设定</p><h3 id="计算奖励"><a href="#计算奖励" class="headerlink" title="计算奖励"></a>计算奖励</h3><p>仁者见仁，智者见智</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Reinforcement-Learning-强化学习&quot;&gt;&lt;a href=&quot;#Reinforcement-Learning-强化学习&quot; class=&quot;headerlink&quot; title=&quot;Reinforcement Learning    强化学习&quot;&gt;&lt;/a&gt;Re</summary>
+      
     
     
     
@@ -33,7 +105,7 @@
     <link href="http://example.com/2023/08/22/pytorch/"/>
     <id>http://example.com/2023/08/22/pytorch/</id>
     <published>2023-08-22T01:08:01.000Z</published>
-    <updated>2023-08-22T03:20:33.468Z</updated>
+    <updated>2024-11-05T14:03:52.712Z</updated>
     
     <content type="html"><![CDATA[<h1 id="机器学习流程"><a href="#机器学习流程" class="headerlink" title="机器学习流程"></a>机器学习流程</h1><h2 id="第一步，准备好数据集"><a href="#第一步，准备好数据集" class="headerlink" title="第一步，准备好数据集"></a>第一步，准备好数据集</h2><p>准备数据集。拿到了大量的数据。<br>当然如果是强化学习，我还没坐过，还不知道，需不需要数据集。</p><h2 id="第二部，数据处理"><a href="#第二部，数据处理" class="headerlink" title="第二部，数据处理"></a>第二部，数据处理</h2><p>其实第一步，也应该在这一步里面吧</p><p>要对数据进行处理。<br>。</p><h3 id="数据特征的选取"><a href="#数据特征的选取" class="headerlink" title="数据特征的选取"></a>数据特征的选取</h3><p>数据集的数据，不一定都是我们需要的。所以要进行一定的筛选<br>数据集的一列，这个列名就是特征的名字。有的特征没有意义，可以不要。</p><h3 id="数据集打乱"><a href="#数据集打乱" class="headerlink" title="数据集打乱"></a>数据集打乱</h3><p>就是打乱数据的顺序，有的数据集会按照某一列（标签列，称之为标签，就是结果，答案，我们要用模型去预测结果，使得预测的结果尽可能符合实际的结果）<br>如果存在一定顺序的话，可能会影响训练的效果，譬如模型会倾向数据按顺序的最后的一个结果。<br>当然了，如果这个数据集的按照时间排列，模型就是需要抓取这种时序性，譬如RNN，循环神经网络（会根据以前的信息来预测下一的输出结果）。这种应该就不用</p><h3 id="一条输入数据的size的调整"><a href="#一条输入数据的size的调整" class="headerlink" title="一条输入数据的size的调整"></a>一条输入数据的size的调整</h3><p>一张图片数据 3<em>width</em>height<br>（<br>举例：3<em>1920</em>1080：宽是1920，高是1080，对应的每个位置是一个像素点。而每个像素点，由RGB 3个数值组成<br>所以有三个二维矩阵，第一个矩阵对应所有像素点R的数值，第二矩阵对应所有像素点G的数值，第三个B的。一个数值就是一个浮点数（0-255）<br>每一个矩阵在机器学习中，称为一个通道</p><p>所以一张图片，在机器学习中：就是一个三通道，宽是1920，高是1080的数据而已<br>size:[3,1920,1080]<br>）<br>但是呀，大量的数据，不可能一个数据一个数据的去训练，所以有batch_size这个超参数，就是一次多少条数据<br>（<br>再解释一个名词,超参数，为什么是超参数，因为不是实际的参数，但又比参数要重要，所以称之为超参数，<br>解释一下参数，参数就是模型的参数，在神经网路中，模型，就是由好多个好多个二维矩阵组成。二维矩阵中的每一个数值，就是 一个参数<br>所以超参数，会直接影响模型。超级，名副其实。<br>）<br>pytorch，也默认不是一条数据 一条数据的训练<br>一次进入模型很多条数据<br>size进化 ：[batch_size,channel,width,height]，[10,3,1920,1080]</p><h3 id="数据集Datasets"><a href="#数据集Datasets" class="headerlink" title="数据集Datasets"></a>数据集Datasets</h3><p>Datasets的作用是将原始的数据转换为模型能够处理的格式。<br>它提供了一些基本的方法，比如__len__用于获取数据集的大小，<br>__getitem__用于按索引获取单个数据样本。</p><p>可能某一列的数据，不符合，譬如一个字符串转换成列表（可能），有的浮点数可能需要转换成整数（少，举例子而已）</p><p>大部分浮点数，因为pytorch，和计算机发达。默认64位浮点数，甚至有的双精度。128位的浮点数。<br>但是大量的数据集，精度高，会加大计算量，very 大。所以，需要手动的去给数据设置数据格式，numpy.float32，torch.float32（32位的浮点数，非常好，即保留了一定精度，32位大大降低计算量）</p><p>我们可以在这个类中进行数据预处理、数据增强等操作，<br>以满足模型的需求。</p><h3 id="数据迭代器Dataloader"><a href="#数据迭代器Dataloader" class="headerlink" title="数据迭代器Dataloader"></a>数据迭代器Dataloader</h3>]]></content>
     
@@ -57,7 +129,7 @@
     <link href="http://example.com/2023/08/11/VGG%E2%80%94demo/"/>
     <id>http://example.com/2023/08/11/VGG%E2%80%94demo/</id>
     <published>2023-08-11T12:45:25.000Z</published>
-    <updated>2023-08-12T02:51:22.957Z</updated>
+    <updated>2024-11-05T13:54:35.990Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VGG"><a href="#VGG" class="headerlink" title="VGG"></a>VGG</h1><p>参加的一个比赛。<br>给出的数据，位移与载荷对应着一个坐标图的x,y的坐标序列，还有两个其他的数据，两个数字而已</p><p>起码提交一个模型<br>一开始以为RNN。认为是一个时间序列。<br>但是评分不高，测试一下CNN。<br>打算，根据两个序列，绘制一个对应的二维矩阵，对应点，若有数据，就设置为一。<br>使用0&#x2F;1矩阵，表示一个折线图<br>但是数据的差异很大，有一部分（很少一部分，又不一定是异常数据），<br>位移最大500&#x2F;载荷最大617<br>大部分数据的载荷集中出现再20-50之间，非常大一部分。<br>500*500的矩阵，十分不适合，十分没有效果<br>所以打算不处理数据，直接使用。</p><p>采用VGG网络</p><p>模型运行成功以后，还是效果很差<br>学习率0.01，数据集运行10次，标准的VGG网络模型<br>导致的结果应该是过拟合了。<br>实际效果，数据集，训练了第一次后，该模型给出的输出同一变成同一个值，不变成其他值<br>训练准确率，与测试机的准确率只有0.16。主要还是因为这个值对应的数据量稍微多一点。所以再.16&#x2F;0.17<br>不然正常应该十分之一的概率</p><p>过拟合原因：<br>    1,VGG模型架构太深了<br>        VGG减少输入的大小，转化增加通道数。到最好的的通道数达到了512个通道。<br>        通道数过多了，或者卷积层深度太深了<br>    2，学习率的问题<br>        学习率高，导致学习的时候，可能产生学习太快了，对其中一个类别的产生了倾向。</p><p>后续调整方向<br>    学习率：可以再0.001这个级别进行调整<br>    数据集训练次数（epoch）：可以调整，增加几次<br>    模型：<br>        池化层，池化层内核我设置为一，所以没用。<br>        内核大小和步幅，填充。都是可以调整</p>]]></content>
     
@@ -82,9 +154,9 @@
     <link href="http://example.com/2023/08/01/Backtracking3/"/>
     <id>http://example.com/2023/08/01/Backtracking3/</id>
     <published>2023-08-01T11:30:18.000Z</published>
-    <updated>2023-08-01T12:20:05.237Z</updated>
+    <updated>2024-11-05T14:03:23.216Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><p>第一个：构建解空间数<br>    在这里空间数与剪枝函数相对应<br>        剪枝函数—有两种<br>            树层裁剪<br>                树层裁剪—减少不必要的选项<br>                    如果是有序的，寻找边界，可以找到边界的话，这个剪枝条件放在for循环中的条件中<br>                    如果是无序，只能放在for循环里面，首先就对当前元素检测，不符合条件的continue；<br>            树枝裁剪<br>                树枝裁剪—提前结束，不继续往下探索<br>                    这种就是条件是递归函数的参数。</p><p>排列问题（1）：<br>集合：[1,2,3,4,5,6,7,8]<br>特点：没有重复元素</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所以要记录用过的元素<br>层的限定：应该没有层的限制。横向的限制应该没有</p><p>排列问题（2）：<br>集合：[1,1,2,3,4,4,5,6,7,8]<br>[1,2,1,2]<br>特点：存在重复元素</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所有要记录用过的元素<br>层的限定：在同一层上，相同的元素，不要再用了。限制条件可以使用：先排序，排序后，如果该元素与前一个或者后一个元素相同，则不选择</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><p>第一个：构建解空间数<br>    在这里空间数与剪枝函数相对应<br>        剪枝函数—有两种<br>            树层裁剪<br>                树层裁剪—减少不必要的选项<br>                    如果是有序的，寻找边界，可以找到边界的话，这个剪枝条件放在for循环中的条件中<br>                    如果是无序，只能放在for循环里面，首先就对当前元素检测，不符合条件的continue；<br>            树枝裁剪<br>                树枝裁剪—提前结束，不继续往下探索<br>                    这种就是条件是递归函数的参数。</p><p>排列问题（1）：<br>集合：[1,2,3,4,5,6,7,8]<br>特点：没有重复元素</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所以要记录用过的元素<br>层的限定：应该没有层的限制。横向的限制应该没有</p><p>排列问题（2）：<br>集合：[1,1,2,3,4,4,5,6,7,8]<br>[1,2,1,2]<br>特点：存在重复元素s</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所有要记录用过的元素<br>层的限定：在同一层上，相同的元素，不要再用了。限制条件可以使用：先排序，排序后，如果该元素与前一个或者后一个元素相同，则不选择</p><p>组合问题：</p>]]></content>
     
     
       
@@ -106,7 +178,7 @@
     <link href="http://example.com/2023/07/31/Paper-1/"/>
     <id>http://example.com/2023/07/31/Paper-1/</id>
     <published>2023-07-31T12:02:51.000Z</published>
-    <updated>2023-07-31T12:25:53.543Z</updated>
+    <updated>2024-11-05T14:03:45.143Z</updated>
     
     <content type="html"><![CDATA[<h1 id="论文—边缘缓存"><a href="#论文—边缘缓存" class="headerlink" title="论文—边缘缓存"></a>论文—边缘缓存</h1><h1 id="Edge-Cache"><a href="#Edge-Cache" class="headerlink" title="Edge Cache"></a>Edge Cache</h1><p>该怎么说呢</p><p>现状就是，师姐的第一个工作很厉害，第二个工作交给我。继承下来了，而且第二个工作，虽然没有完成。<br>但是已经收到了老师和专家们的肯定了。但是我真看不来苗头。</p><p>如何的自圆自话。<br>现在的已经建设好的是：<br>    第一个功能点吧，缓存分配。<br>        这里面两步：<br>            第一步：存储空间分配。给AP分配合理大小的缓存空间<br>            第二部：存储分区。对分配得到的缓存空间进一步划分，分区，不同的CP内容提供者提供，不同的分区。</p><pre><code class="hljs">第二个功能点，你在哪里，我好想你呀。爱你的杰</code></pre><p>根据师姐，老师的话。<br>师姐第二个工作是依托于第一个工作的。<br>今天看了一下师姐第二个工作<br>第一个功能点：预测AP存储空间的分配，时间序列，季节回归模型进行预测的吧<br>第二个功能点：流量预测，与内容放置。使用的是HIN（异构信息网络）。内容，AP，等构成序列对，预测什么内容更受欢迎，并将其放置在适合的AP上面。</p><p>还有，内容主动请求—主动缓存。</p><p>那这个工作依托于第一个工作，是第一个工作的其他方面的加强版本。增强版本的话。<br>这个功能是否依旧呢。不改功能点，只改方法，换种方法或者优化方法</p><p>现在已经优化的有，用户隐私安全，采用的联邦学习。这个第一个功能点加强的部分。<br>那么存储空间的分配，本地模型是否依旧采用时间序列，季节回归模型预测呢？<br>第一个功能点中的，二次存储分配—存储分区。采用了机器学习（名义上，数据驱动策略，就是一种强化学习，还不是深度强化学习）<br>且已经证明多CP的内容分区，具有良好的性能，具有相当好的存储空间利用率</p><p>第二个功能点，如何做呢，才能更好。师姐的异构信息网络的提升太大了吧。怎么说，采用偷偷手法，在师姐原有的基础上改进。<br>还是换一种新的。但是她对比方案，机器学习（强化学习，不知道是不是，性能与之相比，确实是小巫见大巫了）</p><p>或者大胆一点。不做这个流量预测与内容放置了。或者侧重点放在一个小点子上。可以不？</p><p>但是边缘缓存方向，不做这个流量预测与内容放置。还有什么呢。重点是，一个功能点已经确定了，还要与第一个功能点相关联</p>]]></content>
     
@@ -130,7 +202,7 @@
     <link href="http://example.com/2023/07/31/Backtracking2/"/>
     <id>http://example.com/2023/07/31/Backtracking2/</id>
     <published>2023-07-31T01:00:16.000Z</published>
-    <updated>2023-07-31T01:33:53.575Z</updated>
+    <updated>2024-11-05T14:03:19.327Z</updated>
     
     <content type="html"><![CDATA[<h1 id="回溯算法（Backtracking-algorithm）"><a href="#回溯算法（Backtracking-algorithm）" class="headerlink" title="回溯算法（Backtracking algorithm）"></a>回溯算法（Backtracking algorithm）</h1><p>回溯算法就是暴力破解吧</p><p>不不不！</p><p>应该是暴力破解升级版，plus版本</p><p>暴力破解：生成所有的可能的解，找符合条件（每个解都生成，都检查一遍）</p><p>回溯算法：寻找所有可能的解，符合条件留下。</p><p>但：寻找解的过程中，已经不满足条件了，就不继续了，不完整的生成这个不符合条件的解；</p><p>差异：暴力破解，大多使用多个循环嵌套，寻找可能的解。简单粗暴。但是有时循环的数量不确定。（寻找N元组，eg：N&#x3D;3,N&#x3D;4）。而回溯算法采用递归，不用确定循环次数。</p><p>使用递归的方式暴力破解，暴力寻找。回溯算法，有限界函数，剪枝函数（限界条件。剪枝条件）。可以更早的结束不必要的寻找。</p><p>递归方式的暴力破解，加上剪枝函数，限界函数&#x3D;&#x3D;回溯算法</p><p>所以回溯算法与暴力破解一样，不适用也不能在大数据的情况下使用，内存占用太大</p><p>不用递归行不行？毕竟递归函数可以通过栈，队列等数据结构的辅助，转换成非递归的形式。</p><p>回溯算法：常常适用于组合排列等问题。要寻找到所有可能的解。</p><p>对于组合排列问题：<br>    解里面不能有重复元素：{1，1，2，3，8，5，4，6，7，8，4}<br>        值不重复，但是元素可以重复：找出所有的三元组的组合，但是每一组合中不能有重复的解<br>        值可以重复，元素不可以重复：找出所有的三元组的排列，</p><pre><code class="hljs">处理方向就两个：        横向（宽度）：解空间同一树层，进行筛选        纵向（深度）：解空间，同一树枝，进行筛选    二者并不冲突，可以分开使用或混合使用</code></pre>]]></content>
     
@@ -154,7 +226,7 @@
     <link href="http://example.com/2023/07/28/Backtracking/"/>
     <id>http://example.com/2023/07/28/Backtracking/</id>
     <published>2023-07-28T12:08:35.000Z</published>
-    <updated>2023-07-28T13:03:23.988Z</updated>
+    <updated>2024-11-05T14:02:33.239Z</updated>
     
     <content type="html"><![CDATA[<h1 id="回溯算法（Backtracking-algorithm）"><a href="#回溯算法（Backtracking-algorithm）" class="headerlink" title="回溯算法（Backtracking algorithm）"></a>回溯算法（Backtracking algorithm）</h1><p>通过迭代的方式在解空间中寻找符合条件的解<br>寻找符合条件的组合，排列</p><p>解空间，要清楚的构造自己的解空间<br>树的形状，去搜索解</p><p>终止条件与剪枝函数<br>剪枝函数：在递归寻找符合条件的解的过程中，遇到中间过程就不符合条件的，就终止当前，不在继续往下寻找，直接返回<br>终止条件：寻找的解，形式上符合结果的形式了，是不是最终的解，还需要多加一重判断。终止条件就是解形式符合结果就行。</p><p>剪枝函数放置在哪里呢？<br>放在for循环里面更好还是在终止条件里面更好？</p><p>放在循环里面可以更快的终止不符合条件的解<br>但是放在终止条件，有清晰明了的结构</p><p>所以自己判断。在处理节点这里处理</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; res;<br>vector&lt;<span class="hljs-type">int</span>&gt; tem;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(参数)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (终止条件) &#123;<br>        存放结果;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">for</span> (选择：本层集合中元素（树中节点孩子的数量就是集合的大小）) &#123;<br>        处理节点;<br>        <span class="hljs-built_in">backtracking</span>(路径，选择列表); <span class="hljs-comment">// 递归</span><br>        回溯，撤销处理结果<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
@@ -178,7 +250,7 @@
     <link href="http://example.com/2023/07/27/1/"/>
     <id>http://example.com/2023/07/27/1/</id>
     <published>2023-07-27T03:01:23.925Z</published>
-    <updated>2023-07-28T01:53:11.198Z</updated>
+    <updated>2024-11-05T14:02:05.400Z</updated>
     
     <content type="html"><![CDATA[<h1 id="hexo–github"><a href="#hexo–github" class="headerlink" title="hexo–github"></a>hexo–github</h1><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p><p>既然是框架，就依照框架的流程去使用它。<br>hexo是一个工具应用（Application）</p><p>使用流程：</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment"># 第一步安装这个应用程序，hexo-cli是hexo脚手架，就是一个封装，打包好的，更方便用户使用的应用程序形式</span><br>npm <span class="hljs-keyword">install </span>hexo-cli -g <br><span class="hljs-comment"># 开始初始化一个博客。其实这一步，就是使用hexo-cli创建一个容器（blog目录，及其里面相关文件），然后下载一个默认主题的博客，放在容器里面。</span><br>hexo init <span class="hljs-keyword">blog</span><br><span class="hljs-keyword"></span><span class="hljs-comment"># 进入刚才使用初始化命令创建的blog目录</span><br>cd <span class="hljs-keyword">blog</span><br><span class="hljs-keyword"></span><span class="hljs-comment"># 下载相关依赖的库文件，包文件，第三方模块</span><br>npm <span class="hljs-keyword">install</span><br><span class="hljs-keyword"></span><span class="hljs-comment"># 启动hexo web程序，博客网站可以正常运行起来，此时可以浏览器输入localhost：4000，可以看到默认的hexo博客网站</span><br>hexo server<br></code></pre></td></tr></table></figure><h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><p>单纯方便，还不够吸引人，吸引人还有其相应的主题</p><p>博客不同的样式就是其不同的主题</p><p>应用程序生成的blog目录下，有个themes文件夹，可以下载其他的主题放置在这个文件夹里面。<br><img src="/./../img/image.png"><br>我这里有三个主题，我所下载的，fuild，resume-docs，Sw-blog这三个。默认主题landscape不在里面。<br><img src="/./../img/image-1.png"><br>而每个主题里面的文件目录结构应该一致，大差不差<br><img src="/./../img/image-2.png"></p><p>其次是配置主题，哪怕是同一个主题，设置不同，也会有不同的差异<br>每个主题里面都有一个_config.yml。可以在里面查看可以自己设置的设置</p><p>blog目录下，也有一个_config.yml。这个整个本地hexo的设置。两者相互配合。<br>若有存在对一个属性不同的设置，主题里面的生效，优先级更高。</p><h1 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h1><h2 id="创建一个仓库repositories"><a href="#创建一个仓库repositories" class="headerlink" title="创建一个仓库repositories"></a>创建一个仓库repositories</h2><p>仓库的名字：[GitHub_name].github.io<br>Add a README file这个选项，可选可不选。<br>勾上：就是创建readme文件，默认创建仓库main分支了。<br>不勾上：就是一个空的仓库，没有分支，里面啥都没有。<br><img src="/./../img/image-3.png"><br>在创建的这个仓库里面的settings里面设置<br>左侧General设置：Default branch。默认是main，但是我本地使用git上传文件，创建使用的master分支，所以我修改了<br><img src="/./../img/image-4.png"><br>左侧Pagers设置：Branch选择blog网站文件那个分支，第二个&#x2F;root，是要求在该目录下能找到index.html文件。<br>这个设置，就是告诉github，在我这个仓库的该分支的该目录下，找到index.html文件，并在人家访问[GitHub_name].github.io网址的时候，响应这个网页。<br><img src="/./../img/image-5.png"></p><h2 id="上传blog网站文件"><a href="#上传blog网站文件" class="headerlink" title="上传blog网站文件"></a>上传blog网站文件</h2><p>blog网站文件怎么获取，使用hexo这个应用程序</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs verilog"># 清楚缓存，清楚之前产生的文件。<br>hexo clean<br># 这个命令会产生 <span class="hljs-variable">.deploy_git</span>文件夹。这个文件和github主仓库的文件一样，这个就是使用hexo，它按照要求（主题，配置文件，自己写的markdown文件），自动生成的blog网站文件<br>hexo <span class="hljs-keyword">generate</span> <br># 自动deploy（部署），在_config<span class="hljs-variable">.yml</span>配置<br>hexo deploy<br></code></pre></td></tr></table></figure><p><img src="/./../img/image.png"><br><img src="/./../img/image-6.png"></p><h1 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h1><p>配置就这些，对应上了就行<br>官方文件要一直看，跟着官方文件走 <a href="https://hexo.io/zh-cn/" title="Title">hexo官网</a></p>]]></content>
     
@@ -202,9 +274,9 @@
     <link href="http://example.com/2023/07/27/hello-world/"/>
     <id>http://example.com/2023/07/27/hello-world/</id>
     <published>2023-07-27T02:00:11.367Z</published>
-    <updated>2023-07-27T12:38:32.695Z</updated>
+    <updated>2023-11-02T02:54:32.286Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo clean<br>$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
       

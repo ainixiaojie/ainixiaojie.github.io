@@ -4,11 +4,68 @@
   
   
   <entry>
+    <title>Mathematical_Foundations_of_Reinforcement_Learning</title>
+    <link href="/2023/11/04/Mathematical-Foundations-of-Reinforcement-Learning/"/>
+    <url>/2023/11/04/Mathematical-Foundations-of-Reinforcement-Learning/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Mathematical_Foundations_of_Reinforcement_Learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>reinforcement_learning_Bellman_equation</title>
+    <link href="/2023/11/03/reinforcement-learning-Bellman-equation/"/>
+    <url>/2023/11/03/reinforcement-learning-Bellman-equation/</url>
+    
+    <content type="html"><![CDATA[<h1 id="贝尔曼公式-Bellman-equation"><a href="#贝尔曼公式-Bellman-equation" class="headerlink" title="贝尔曼公式 Bellman_equation"></a>贝尔曼公式 Bellman_equation</h1><p>用来计算。当前的全局策略下，状态为s。可以获得的return（一系列动作至达到目标，或者无限延续的连续动作序列，所获的奖励值）</p><p>这个return。是一个期望值，是所有的可能的动作序列的期望奖励。</p><p>这个return值可以认为是当前策略下，状态s的值为return的值  状态值  state value</p><p>举例：<br>    五个状态，初始时，五个状态值<br>    [0,0,0,0,0]<br>    动作只有一个。所以每个状态都只能执行该动作。<br>    奖励值如下：<br>    第五个状态就是目的地。所以第四个状态执行动作，获得奖励值为1。其余所有状态，执行动作获得的奖励值都为0<br>    [0,0,0,1,0]</p><pre><code class="hljs">经过第一次动作迭代,1-2-3-4-5.结束guma=0.1s_value=reward+guma*s_next_value执行第一个动作s_1_value=0_reward+guma*s_2_values_1_value=0+0.1*0=0执行第二个动作s_2_value=1_reward+guma*s_3_values_2_value=0+0.1*0=0执行第三个动作s_3_value=0_reward+guma*s_4_values_3_value=0+0.1*0=0执行第四个动作s_4_value=0_reward+guma*s_5_values_4_value=1+0.1*0=1-----第一次到达目的地，完成了一回合的学习状态值：[0,0,0,**0**,0]----&gt;[0,0,0,**1**,0]---- 第二回合来了经过动作迭代,1-2-3-4-5.结束guma=0.1s_value=reward+guma*s_next_value执行第一个动作s_1_value=0_reward+guma*s_2_values_1_value=0+0.1*0=0执行第二个动作s_2_value=1_reward+guma*s_3_values_2_value=0+0.1*0=0执行第三个动作s_3_value=0_reward+guma*s_4_values_3_value=0+0.1*1=0.1执行第四个动作s_4_value=0_reward+guma*s_5_values_4_value=1+0.1*0=1-----第二次到达目的地，完成了二回合的学习状态值：[0,0,**0**,1,0]----&gt;[0,0,**0.1**,1,0]由此可推:第三次[0,**0**，0.1,1,0]----&gt;[0,**0.01**,0.1,1,0]第四次[**0**，0。01,0.1,1,0]----&gt;[**0.001**,001,0.1,1,0]</code></pre><p>Action value 动作值<br>状态值:<br>这里设定，每个状态只有一个动作。所以动作的概率值为1.没得挑<br>s_value&#x3D;reward+guma<em>s_next_value<br>实际上：<br>s_value&#x3D;{a_probablityity  * [a_reward+guma</em>s_next_value]}的期望</p><p>状态值&#x3D;{动作的概率<em>（动作reward+动作后所到达的状态的状态值）}的期望。<br>动作值&#x3D;（动作reward+动作后所到达的状态的状态值）<br>a_value&#x3D;a_reward+guma</em>s_next_value</p><h1 id="贝尔曼最优公式-Bellman-optimality-equation"><a href="#贝尔曼最优公式-Bellman-optimality-equation" class="headerlink" title="贝尔曼最优公式 Bellman_optimality_equation"></a>贝尔曼最优公式 Bellman_optimality_equation</h1>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>reinforcement_learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>reinforcement_learning_Actor</title>
+    <link href="/2023/11/02/reinforcement-learning-Actor/"/>
+    <url>/2023/11/02/reinforcement-learning-Actor/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Actor-行动者-演员"><a href="#Actor-行动者-演员" class="headerlink" title="Actor 行动者&#x2F;演员"></a>Actor 行动者&#x2F;演员</h1><p>这是一种agent（智能体）</p><p>输入：状态</p><p>使用<strong>神经网络</strong></p><p>输入：每个动作的概率值</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>reinforcement_learning</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>reinforcement_learning 概论</title>
     <link href="/2023/11/02/reinforcement-learning/"/>
     <url>/2023/11/02/reinforcement-learning/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Reinforcement-Learning-强化学习"><a href="#Reinforcement-Learning-强化学习" class="headerlink" title="Reinforcement Learning    强化学习"></a>Reinforcement Learning    强化学习</h1><p>智能体与环境的交互。</p><p>智能体  根据环境的状态  提供动作给环境<br>环境    执行了动作  改变了环境的状态    反馈奖励给智能体（状态信息也反馈给智能体）</p><p>智能体在根据自己提供的动作与环境反馈的奖励，不断学习。<br>环境根据智能体提供的动作不断变化状态，反馈奖励。</p><h2 id="智能体"><a href="#智能体" class="headerlink" title="智能体"></a>智能体</h2><p>智能体就三个行为,选择动作,预测动作,学习</p><h3 id="1，选择动作-Sample"><a href="#1，选择动作-Sample" class="headerlink" title="1，选择动作 Sample"></a>1，选择动作 Sample</h3><p>输入：环境的状态<br>输出：智能体选择的动作</p><p>常见的。e-greedy策略<br>假设e&#x3D;0.3<br>生成一个随机数,范围[0，1]。<br>若是随机数小于e。则从所有的动作中随机选择一个动作<br>否则，使用预测Predict。他会选择当前最优的动作。</p><pre><code class="hljs">这个通常是在学习的时候使用这个选择动作 Sample。若是学习完成了，则就直接使用Predict了。</code></pre><p>一定概率的随机选择，可以走出更多不同的动作。放置陷入局部最优。</p><pre><code class="hljs">三个动作，[1，2，3]对应奖励 [1，2，3]但是默认，一开始的时候。我们认为所有动作的奖励值都为0。[0，0，0]奖励值一样，第一次执行动作1，得到奖励1。更新奖励值[1，0，0]若是没有随机。那么以后都会选择动作1。无法学习到真正最好的动作。</code></pre><h3 id="2，预测动作-Predict"><a href="#2，预测动作-Predict" class="headerlink" title="2，预测动作 Predict"></a>2，预测动作 Predict</h3><p>输入：环境的状态</p><p>输出：智能体当前策略的最优的动作&#x2F;或者价值最高的动作</p><h3 id="3，学习-Learn"><a href="#3，学习-Learn" class="headerlink" title="3，学习 Learn"></a>3，学习 Learn</h3><p>输入：环境的状态，奖励，（可选择的：智能体选择执行的动作）</p><p>输出：更新智能体的策略（函数，模型，这些都是一样的东西，就是智能体选择动作的方法）。</p><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>设定与行为</p><pre><code class="hljs">设定：    状态的设定    动作的设定    奖励的设定行为：    重置环境    执行动作（默认执行）    计算奖励（后台执行，执行动作后自动进行）</code></pre><h3 id="状态的设定-States-Observation"><a href="#状态的设定-States-Observation" class="headerlink" title="状态的设定 States&#x2F;Observation"></a>状态的设定 States&#x2F;Observation</h3><p>环境的状态就是一条信息，一条数据。可以唯一表示一个状态。</p><p>最常见的就是用一条向量代表一个状态。</p><p>用一个图片代表一个状态。</p><p>所有可能的状态组合在一起，称之为观测空间<strong>Observation_Space</strong>。<br>这只是一个概念。重点还是放在状态的表示。</p><p>状态的表示有离散型和连续性。<br>假设数值范围[1，10]。</p><pre><code class="hljs">离散型状态：    离散值设置1。10个状态。每个数字代表一个状态。1，2，3，4，5，6，7，8，9，10    离散值设置2。5个状态。1，3，5，7，9。    ...连续型状态：    无数个状态：0.1，4.675，7.334等等</code></pre><p>假设状态：</p><pre><code class="hljs">[时间，水库水位下降百分比]：一个状态由这两个特征表示时间：只可取小时为单位，则离散值1-24水库水位下降百分比：若不限制小数个数。随意取值，连续。无数个该观测空间也是连续的。</code></pre><p><mark> 这里还有个设定，环境信息的设定</mark></p><pre><code class="hljs">环境的附加信息。常常是一些不会变化的信息。譬如一个打boss游戏。    环境状态就是boss的状态    动作就是角色的技能    附加的信息：        boss的名字。        角色的信息。        ...</code></pre><h3 id="动作的设定-Actions"><a href="#动作的设定-Actions" class="headerlink" title="动作的设定 Actions"></a>动作的设定 Actions</h3><p>动作的设定与状态的设定一样。离散型与连续型。</p><pre><code class="hljs">假设动作[上，下，左，右]------离散型也可假设[方向，距离（该值连续）]-----连续性</code></pre><p>所有的动作集合一起称之为动作空间 <strong>Action_Space</strong></p><h3 id="奖励的设定-Reward"><a href="#奖励的设定-Reward" class="headerlink" title="奖励的设定 Reward"></a>奖励的设定 Reward</h3><p>仁者见仁，智者见智<br>打怪游戏：boss下降的血量值<br>迷宫游戏：只有到达终点才给奖励值。只要没到终点，奖励值-1。<br>。。。</p><h3 id="执行动作-Step"><a href="#执行动作-Step" class="headerlink" title="执行动作 Step"></a>执行动作 Step</h3><p>仁者见仁，智者见智</p><p>这个行为总的来说：执行动作，计算奖励，给与反馈。这三个小步骤</p><pre><code class="hljs">1，执行动作，重点就是这个动作的逻辑如何执行动作，打怪游戏，动作是释放一技能。技能伤害是100，护甲50，是否暴击（暴击两倍伤害）：是。boss血量=boss血量-（100-50）*2。2，计算奖励：（100-50）*2。当然这是假设的奖励机制。也可以造成伤害就奖励100.类似这种。仁者见仁，智者见智3，给与反馈，要有返回值：状态，奖励，是否终止，等等</code></pre><p>动作的执行逻辑部分，也是有自己设定</p><h3 id="计算奖励"><a href="#计算奖励" class="headerlink" title="计算奖励"></a>计算奖励</h3><p>仁者见仁，智者见智</p>]]></content>
     
     
     <categories>
@@ -83,7 +140,7 @@
     <link href="/2023/08/01/Backtracking3/"/>
     <url>/2023/08/01/Backtracking3/</url>
     
-    <content type="html"><![CDATA[<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><p>第一个：构建解空间数<br>    在这里空间数与剪枝函数相对应<br>        剪枝函数—有两种<br>            树层裁剪<br>                树层裁剪—减少不必要的选项<br>                    如果是有序的，寻找边界，可以找到边界的话，这个剪枝条件放在for循环中的条件中<br>                    如果是无序，只能放在for循环里面，首先就对当前元素检测，不符合条件的continue；<br>            树枝裁剪<br>                树枝裁剪—提前结束，不继续往下探索<br>                    这种就是条件是递归函数的参数。</p><p>排列问题（1）：<br>集合：[1,2,3,4,5,6,7,8]<br>特点：没有重复元素</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所以要记录用过的元素<br>层的限定：应该没有层的限制。横向的限制应该没有</p><p>排列问题（2）：<br>集合：[1,1,2,3,4,4,5,6,7,8]<br>[1,2,1,2]<br>特点：存在重复元素</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所有要记录用过的元素<br>层的限定：在同一层上，相同的元素，不要再用了。限制条件可以使用：先排序，排序后，如果该元素与前一个或者后一个元素相同，则不选择</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><p>第一个：构建解空间数<br>    在这里空间数与剪枝函数相对应<br>        剪枝函数—有两种<br>            树层裁剪<br>                树层裁剪—减少不必要的选项<br>                    如果是有序的，寻找边界，可以找到边界的话，这个剪枝条件放在for循环中的条件中<br>                    如果是无序，只能放在for循环里面，首先就对当前元素检测，不符合条件的continue；<br>            树枝裁剪<br>                树枝裁剪—提前结束，不继续往下探索<br>                    这种就是条件是递归函数的参数。</p><p>排列问题（1）：<br>集合：[1,2,3,4,5,6,7,8]<br>特点：没有重复元素</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所以要记录用过的元素<br>层的限定：应该没有层的限制。横向的限制应该没有</p><p>排列问题（2）：<br>集合：[1,1,2,3,4,4,5,6,7,8]<br>[1,2,1,2]<br>特点：存在重复元素s</p><p>寻找n个元素的全排列</p><p>树枝限定：一个树枝上的元素，同一元素只能用一次，所有要记录用过的元素<br>层的限定：在同一层上，相同的元素，不要再用了。限制条件可以使用：先排序，排序后，如果该元素与前一个或者后一个元素相同，则不选择</p><p>组合问题：</p>]]></content>
     
     
     <categories>
@@ -208,7 +265,7 @@
     <link href="/2023/07/27/hello-world/"/>
     <url>/2023/07/27/hello-world/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo clean<br>$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
     <categories>
