@@ -1,0 +1,24 @@
+# Hexo 生成产物
+public/
+db.json
+.deploy_git/
+
+# 依赖（由 package.json + package-lock.json 管理）
+node_modules/
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE / 编辑器
+.vscode/
+.idea/
+
+# 个人笔记（误放在项目根目录）
+/json
