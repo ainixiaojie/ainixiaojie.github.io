@@ -1,0 +1,75 @@
+<%
+page.layout = "about"
+page.title = theme.about.title || __('about.title')
+page.subtitle = theme.about.subtitle || __('about.subtitle')
+page.banner_img = page.banner_img || theme.about.banner_img
+page.banner_img_height = page.banner_img_height || theme.about.banner_img_height
+page.banner_mask_alpha = page.banner_mask_alpha || theme.about.banner_mask_alpha
+%>
+
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name"><%- theme.about.name %></div>
+    <div class="about-intro"><%- theme.about.introduce || theme.about.intro %></div>
+    <div class="about-icons">
+      <% for(const each of theme.about.icons || []) { %>
+        <% if (!each.class) continue; %>
+        <% var cls = each.class %>
+        <% var isQr = each.qrcode %>
+        <a <%= isQr ? '' : ('href=' + url_for(each.link)) %> class="<%= isQr ? 'qr-trigger' : '' %>
+           <%= !isQr && each.tip ? 'hint--bottom hint--rounded' : '' %>"
+           <%= !isQr && each.tip ? 'aria-label=' + each.tip : '' %>
+           target="<%= isQr ? '_self' : '_blank' %>"
+        >
+          <i class="<%= cls %>" aria-hidden="true"></i>
+          <% if (isQr) { %>
+            <img class="qr-img" src="<%= page.banner_img %>" alt="qrcode" />
+          <% } %>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<article class="about-content page-content mt-5">
+  <div id="default-content" class="markdown-body">
+    <%- page.content %>
+  </div>
+
+  <div id="toggleButton" class="text-center">
+        <svg t="1730883651591" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11157" width="50" height="50"><path d="M921.002667 409.344H649.130667C754.346667 20.224 576.597333 0.341333 576.597333 0.341333c-75.52 0-59.904 59.648-65.536 69.546667 0 190.293333-202.154667 339.456-202.154666 339.456v539.562667c0 53.248 72.533333 72.533333 101.034666 72.533333h408.576c38.4 0 69.717333-100.864 69.717334-100.864 101.12-343.722667 101.12-445.952 101.12-445.952 0-70.997333-68.352-65.28-68.352-65.28zM197.376 409.514667H34.56c-33.621333 0-34.133333 33.024-34.133333 33.024l33.621333 544.170666c0 34.645333 34.645333 34.645333 34.645333 34.645334h140.970667c29.354667 0 29.013333-22.869333 29.013333-22.869334V450.730667c0-41.813333-41.301333-41.216-41.301333-41.216z" fill="#D81E06" p-id="11158"></path></svg>
+  </div>
+  
+
+  <% if(page.comments) { %>
+    <!-- Comments -->
+    <article id="comments">
+      <% var type %>
+      <% if (typeof page.comment === 'string' && page.comment !== '') { %>
+        <% type = '_partials/comments/' + page.comment %>
+      <% } else { %>
+        <% type = '_partials/comments/' + theme.post.comments.type %>
+      <% } %>
+      <%- partial(type) %>
+    </article>
+  <% } %>
+</article>
+
+<%- partial('_partials/markdown-plugins') %>
+
+
+<script>
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    // 获取当前页面路径
+    const currentPath = window.location.pathname;
+
+    // 判断当前页面路径，并跳转到对应页面
+    if (currentPath.includes('/about')) {
+      // 如果在 about 页面，跳转到 custom_about 页面
+      window.location.href = '<%= url_for("/custom-about/") %>';
+    } else if (currentPath.includes('/custom-about/')) {
+      // 如果在 custom_about 页面，跳转到 about 页面
+      window.location.href = '<%= url_for("/about/") %>';
+    }
+  });
+</script>

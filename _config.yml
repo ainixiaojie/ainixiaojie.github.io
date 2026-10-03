@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: ❤
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: 梁帅杰
+language: zh-CN
 timezone: ''
 
 # URL
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -97,19 +97,29 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Sw-blog
+theme: fluid  
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment、
 
+
 deploy:
   type: git
-  repo: <git@github.com:ainixiaojie/ainixiaojie.github.io.git> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: main
-
-
-
+  repo: git@github.com:ainixiaojie/ainixiaojie.github.io.git
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: master
+# deploy:
+#   type: git
+#   repo: <git@github.com:ainixiaojie/ainixiaojie.github.io.git> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+#   branch: master
 
 search:
   path: search.json
   field: post
+
+# Easy images
+easy_images:
+  init: true # 默认 false；改为 true，将处理过去所有 post，通常装插件后第一次运行时使用。
+  cdn_prefix:  # 默认 null; 图片前缀，在生成 html 文件时为 image 添加前缀
+  max_width: 800 # 默认 null；设置图片最大宽度
+  max_height: 800 # 默认 null；设置图片最大高度
